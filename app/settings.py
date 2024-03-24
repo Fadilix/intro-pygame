@@ -3,31 +3,31 @@ import pygame
 
 # Enemy walk
 EwalkRight = [
-    pygame.image.load("../Game/R1E.png"),
-    pygame.image.load("../Game/R2E.png"),
-    pygame.image.load("../Game/R3E.png"),
-    pygame.image.load("../Game/R4E.png"),
-    pygame.image.load("../Game/R5E.png"),
-    pygame.image.load("../Game/R6E.png"),
-    pygame.image.load("../Game/R7E.png"),
-    pygame.image.load("../Game/R8E.png"),
-    pygame.image.load("../Game/R9E.png"),
-    pygame.image.load("../Game/R10E.png"),
-    pygame.image.load("../Game/R11E.png"),
+    pygame.image.load("./Game/R1E.png"),
+    pygame.image.load("./Game/R2E.png"),
+    pygame.image.load("./Game/R3E.png"),
+    pygame.image.load("./Game/R4E.png"),
+    pygame.image.load("./Game/R5E.png"),
+    pygame.image.load("./Game/R6E.png"),
+    pygame.image.load("./Game/R7E.png"),
+    pygame.image.load("./Game/R8E.png"),
+    pygame.image.load("./Game/R9E.png"),
+    pygame.image.load("./Game/R10E.png"),
+    pygame.image.load("./Game/R11E.png"),
 ]
 
 EwalkLeft = [
-    pygame.image.load("../Game/L1E.png"),
-    pygame.image.load("../Game/L2E.png"),
-    pygame.image.load("../Game/L3E.png"),
-    pygame.image.load("../Game/L4E.png"),
-    pygame.image.load("../Game/L5E.png"),
-    pygame.image.load("../Game/L6E.png"),
-    pygame.image.load("../Game/L7E.png"),
-    pygame.image.load("../Game/L8E.png"),
-    pygame.image.load("../Game/L9E.png"),
-    pygame.image.load("../Game/L10E.png"),
-    pygame.image.load("../Game/L11E.png"),
+    pygame.image.load("./Game/L1E.png"),
+    pygame.image.load("./Game/L2E.png"),
+    pygame.image.load("./Game/L3E.png"),
+    pygame.image.load("./Game/L4E.png"),
+    pygame.image.load("./Game/L5E.png"),
+    pygame.image.load("./Game/L6E.png"),
+    pygame.image.load("./Game/L7E.png"),
+    pygame.image.load("./Game/L8E.png"),
+    pygame.image.load("./Game/L9E.png"),
+    pygame.image.load("./Game/L10E.png"),
+    pygame.image.load("./Game/L11E.png"),
 ]
 
 # Player walk

@@ -13,8 +13,6 @@ win = pygame.display.set_mode((screen_width, screen_height))
 clock = pygame.time.Clock()
 
 
-
-
 bg = pygame.image.load("./Game/bg.jpg")
 char = pygame.image.load("./Game/standing.png")
 walkCount = 0
