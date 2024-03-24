@@ -1,33 +1,7 @@
-import pygame
+from settings import EwalkLeft as walkLeft, EwalkRight as walkRight
 
 
 class Enemy:
-    walkRight = [
-        pygame.image.load("R1E.png"),
-        pygame.image.load("R2E.png"),
-        pygame.image.load("R3E.png"),
-        pygame.image.load("R4E.png"),
-        pygame.image.load("R5E.png"),
-        pygame.image.load("R6E.png"),
-        pygame.image.load("R7E.png"),
-        pygame.image.load("R8E.png"),
-        pygame.image.load("R9E.png"),
-        pygame.image.load("R10E.png"),
-        pygame.image.load("R11E.png"),
-    ]
-    walkLeft = [
-        pygame.image.load("L1E.png"),
-        pygame.image.load("L2E.png"),
-        pygame.image.load("L3E.png"),
-        pygame.image.load("L4E.png"),
-        pygame.image.load("L5E.png"),
-        pygame.image.load("L6E.png"),
-        pygame.image.load("L7E.png"),
-        pygame.image.load("L8E.png"),
-        pygame.image.load("L9E.png"),
-        pygame.image.load("L10E.png"),
-        pygame.image.load("L11E.png"),
-    ]
 
     def __init__(self, x, y, width, height, end):
         self.x = x
@@ -44,10 +18,10 @@ class Enemy:
         if self.walkCount + 1 <= 33:
             self.walkCount = 0
         if self.vel > 0:
-            win.blit(self.walkRight[self.walkCount // 3], (self.x, self.y))
+            win.blit(walkRight[self.walkCount // 3], (self.x, self.y))
             self.walkCount += 1
         else:
-            win.blit(self.walkLeft[self.walkCount // 3], (self.x, self.y))
+            win.blit(walkLeft[self.walkCount // 3], (self.x, self.y))
             self.walkCount += 1
 
     def move(self):

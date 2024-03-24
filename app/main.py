@@ -1,6 +1,7 @@
 import pygame
 from models.Player import Player
 from models.Projectile import Projectile
+from models.Enemy import Enemy
 
 pygame.init()
 
@@ -12,31 +13,6 @@ win = pygame.display.set_mode((screen_width, screen_height))
 clock = pygame.time.Clock()
 
 
-walkLeft = [
-    pygame.image.load("./Game/L1.png"),
-    pygame.image.load("./Game/L2.png"),
-    pygame.image.load("./Game/L2.png"),
-    pygame.image.load("./Game/L3.png"),
-    pygame.image.load("./Game/L4.png"),
-    pygame.image.load("./Game/L5.png"),
-    pygame.image.load("./Game/L6.png"),
-    pygame.image.load("./Game/L7.png"),
-    pygame.image.load("./Game/L8.png"),
-    pygame.image.load("./Game/L9.png"),
-]
-
-walkRight = [
-    pygame.image.load("./Game/R1.png"),
-    pygame.image.load("./Game/R2.png"),
-    pygame.image.load("./Game/R2.png"),
-    pygame.image.load("./Game/R3.png"),
-    pygame.image.load("./Game/R4.png"),
-    pygame.image.load("./Game/R5.png"),
-    pygame.image.load("./Game/R6.png"),
-    pygame.image.load("./Game/R7.png"),
-    pygame.image.load("./Game/R8.png"),
-    pygame.image.load("./Game/R9.png"),
-]
 
 
 bg = pygame.image.load("./Game/bg.jpg")
@@ -44,10 +20,11 @@ char = pygame.image.load("./Game/standing.png")
 walkCount = 0
 
 
-def redrawGameWindow(player):
+def redrawGameWindow():
     global walkCount
     win.blit(bg, (0, 0))
-    player.draw(win, walkLeft, walkRight, char)
+    man.draw(win)
+    goblin.draw(win)
 
     for bullet in bullets:
         bullet.draw(win)
@@ -59,7 +36,9 @@ run = True
 fps = 27
 
 man = Player(300, 410, 64, 64)
+goblin = Enemy(100, 410, 64, 64, 450)
 bullets = []
+
 while run:
     clock.tick(fps)
     for event in pygame.event.get():
@@ -116,6 +95,6 @@ while run:
             man.isJump = False
             man.jumpCount = 10
 
-    redrawGameWindow(man)
+    redrawGameWindow()
 
 pygame.quit()
