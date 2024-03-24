@@ -41,7 +41,14 @@ class Enemy:
 
     def draw(self, win):
         self.move()
-        pass
+        if self.walkCount + 1 <= 33:
+            self.walkCount = 0
+        if self.vel > 0:
+            win.blit(self.walkRight[self.walkCount // 3], (self.x, self.y))
+            self.walkCount += 1
+        else:
+            win.blit(self.walkLeft[self.walkCount // 3], (self.x, self.y))
+            self.walkCount += 1
 
     def move(self):
         if self.vel > 0:
