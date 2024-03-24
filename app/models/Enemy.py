@@ -50,5 +50,9 @@ class Enemy:
             else:
                 self.vel *= -1
                 self.walkCount = 0
-
-        pass
+        else:
+            if self.x - self.vel > self.path[0]:
+                self.x += self.vel
+            else:
+                self.vel *= -1
+                self.walkcount = 0
